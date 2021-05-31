@@ -7,9 +7,12 @@
 
 import Foundation
 
-class AnalyticsService: AnalyticsControllerProtocol {
-    static let shared = AnalyticsController()
-    var loggers: [AnalyticsEventsLoggerProtocol] = []
+class AnalyticsService: AnalyticsServiceProtocol {
+    static let shared: AnalyticsService = {
+        return AnalyticsService()
+    }()
+    
+    var loggers: [AnalyticsEventLoggerProtocol] = []
 
     private init() {}
 

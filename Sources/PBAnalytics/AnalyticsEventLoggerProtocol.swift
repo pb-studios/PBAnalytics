@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol AnalyticsEventsLoggerProtocol {
+public protocol AnalyticsEventLoggerProtocol {
     func setUserProperties(user: UserProfileProtocol)
     func trackEvent(event: AnalyticsEventProtocol)
 }

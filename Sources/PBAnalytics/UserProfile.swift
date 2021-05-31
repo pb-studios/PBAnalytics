@@ -7,6 +7,6 @@
 
 import Foundation
 
-struct UserProfile: UserProfileProtocol {
-    var id: String
+public struct UserProfile: UserProfileProtocol {
+    public var id: String
 }

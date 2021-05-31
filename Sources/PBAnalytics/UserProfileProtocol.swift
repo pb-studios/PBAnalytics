@@ -7,6 +7,6 @@
 
 import Foundation
 
-protocol UserProfileProtocol {
+public protocol UserProfileProtocol {
     var id: String { get set }
 }

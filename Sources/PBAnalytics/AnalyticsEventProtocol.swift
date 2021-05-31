@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol AnalyticsEventProtocol {
+public protocol AnalyticsEventProtocol {
     var name: String { get set }
     var params: [String: Any] { get set }
 }

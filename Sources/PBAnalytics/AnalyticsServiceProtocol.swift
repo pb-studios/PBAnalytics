@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol AnalyticsServiceProtocol {
+public protocol AnalyticsServiceProtocol {
     func setup()
     func trackEvent(_ event: AnalyticsEventProtocol, params: [String: Any])
 }

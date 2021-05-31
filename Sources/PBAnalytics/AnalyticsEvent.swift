@@ -8,17 +8,17 @@
 import Foundation
 
 @propertyWrapper
-struct AnalyticsEvent: AnalyticsEventProtocol {
-    var name: String
-    var params: [String: Any] = [:]
+public struct AnalyticsEvent: AnalyticsEventProtocol {
+    public var name: String
+    public var params: [String: Any] = [:]
 
-    var wrappedValue: AnalyticsEvent {
+    public var wrappedValue: AnalyticsEvent {
         return AnalyticsEvent(name: name,
                               params: params)
     }
 }
 
-extension AnalyticsEvent {
+public extension AnalyticsEvent {
     init(event: String) {
         self.init(name: event)
     }
