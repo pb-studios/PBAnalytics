@@ -20,7 +20,8 @@ class AnalyticsService: AnalyticsControllerProtocol {
     }
 
     func trackEvent(_ event: AnalyticsEventProtocol,
-                    params _: [String: Any] = [:]) {
+                    params _: [String: Any] = [:])
+    {
         // add extra params to event
         // hit event from all tracking SDK's
         loggers.forEach { logger in
