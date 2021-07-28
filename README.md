@@ -64,7 +64,7 @@ class AnalyticsService: AnalyticsControllerProtocol {
 
     private init() {}
 
-    func setup() {
+    func start() {
         // Setup all the Analytics SDK
         let firebaseEventLogger = FirebaseEventLogger()
         loggers.append(firebaseEventLogger)
