@@ -8,6 +8,6 @@
 import Foundation
 
 public protocol AnalyticsServiceProtocol {
-    func setup()
+    func start()
     func trackEvent(_ event: AnalyticsEventProtocol, params: [String: Any])
 }

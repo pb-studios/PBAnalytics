@@ -9,22 +9,23 @@ import Foundation
 
 class AnalyticsService: AnalyticsServiceProtocol {
     static let shared: AnalyticsService = {
-        return AnalyticsService()
+        AnalyticsService()
     }()
-    
+
     var loggers: [AnalyticsEventLoggerProtocol] = []
 
     private init() {}
 
-    func setup() {
+    func start() {
         // Setup all the Analytics SDK
         let firebaseEventLogger = FirebaseEventLogger()
         loggers.append(firebaseEventLogger)
     }
 
-    func trackEvent(_ event: AnalyticsEventProtocol,
-                    params _: [String: Any] = [:])
-    {
+    func trackEvent(
+        _ event: AnalyticsEventProtocol,
+        params _: [String: Any] = [:]
+    ) {
         // add extra params to event
         // hit event from all tracking SDK's
         loggers.forEach { logger in

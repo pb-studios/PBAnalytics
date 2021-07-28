@@ -7,6 +7,8 @@
 
 import Foundation
 
+// MARK: - AnalyticsEvents
+
 struct AnalyticsEvents {
     enum Onboarding {
         @AnalyticsEvent(screen: ScreenName.onboarding.name, event: "Notif_Permission_Granted")
@@ -98,6 +100,8 @@ struct AnalyticsEvents {
     }
 }
 
+// MARK: - ScreenName
+
 enum ScreenName {
     case onboarding, photos, settings, rating, purchaseView, cancelSubs
 
@@ -118,6 +122,8 @@ enum ScreenName {
         }
     }
 }
+
+// MARK: - AnalyticsParameter
 
 enum ParameterName {
     case screen, clickTarget
