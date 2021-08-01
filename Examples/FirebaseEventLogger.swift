@@ -8,10 +8,16 @@
 import FirebaseAnalytics
 
 class FirebaseEventLogger: AnalyticsEventsLoggerProtocol {
-    public init() {}
+    public init() {
+        // init SDK
+    }
 
-    func setUserProperties(user _: UserProfileProtocol) {
-        // init SDK and set user properties
+    func setUserProperties(_ user: UserProfileProtocol) {
+        // set user properties
+    }
+
+    func setDefaultProperties(_ properties: [String: Any]) {
+        // set default properties
     }
 
     func trackEvent(event: AnalyticsEventProtocol) {

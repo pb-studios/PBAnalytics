@@ -7,7 +7,18 @@
 
 import Foundation
 
+// MARK: - AnalyticsServiceProtocol
+
 public protocol AnalyticsServiceProtocol {
     func start()
-    func trackEvent(_ event: AnalyticsEventProtocol, params: [String: Any])
+    func trackEvent(_ event: AnalyticsEventProtocol)
+    func setUserProperties(_ user: UserProfileProtocol)
+    func setDefaultProperties(_ properties: [String: Any])
+    func clearDefaultProperties()
+}
+
+public extension AnalyticsServiceProtocol {
+    func setUserProperties(_ user: UserProfileProtocol) {}
+    func setDefaultProperties(_ properties: [String: Any]) {}
+    func clearDefaultProperties() {}
 }
