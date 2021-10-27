@@ -9,4 +9,7 @@ import Foundation
 
 public protocol UserProfileProtocol {
     var id: String { get set }
+    var idfa: String? { get set }
+    var device: String? { get set }
+    var os: String? { get set }
 }
