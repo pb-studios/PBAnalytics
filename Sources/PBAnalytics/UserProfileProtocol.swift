@@ -12,4 +12,6 @@ public protocol UserProfileProtocol {
     var idfa: String? { get set }
     var device: String? { get set }
     var os: String? { get set }
+    var country: String? { get set }
+    var appVersion: String? { get set }
 }
