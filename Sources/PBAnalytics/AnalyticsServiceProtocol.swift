@@ -14,6 +14,7 @@ public protocol AnalyticsServiceProtocol {
     func trackEvent(_ event: AnalyticsEventProtocol)
     func setUserProperties(_ user: UserProfileProtocol)
     func setDefaultProperties(_ properties: [String: Any])
+    func setDefaultProperty(_ value: Any, for key: String) 
     func clearDefaultProperties()
 }
 
