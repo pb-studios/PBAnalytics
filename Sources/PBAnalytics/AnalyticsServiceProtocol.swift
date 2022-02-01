@@ -21,5 +21,6 @@ public protocol AnalyticsServiceProtocol {
 public extension AnalyticsServiceProtocol {
     func setUserProperties(_ user: UserProfileProtocol) {}
     func setDefaultProperties(_ properties: [String: Any]) {}
+    func setDefaultProperty(_ value: Any, for key: String) {}
     func clearDefaultProperties() {}
 }
